@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Hello Roman",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "created": 1599561000000,
+    "twitterName": "hello_roman"
+  },
+  {
+    "id": "2",
+    "title": "Redux guy",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "created": 1599559200000,
+    "twitterName": "dan_abramov"
+  },
+  {
+    "id": "3",
+    "title": "React router stuff",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "created": 1599300000000,
+    "twitterName": "mjackson"
+  },
+  {
+    "id": "4",
+    "title": "Super animacje!",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "created": 1598954400000,
+    "twitterName": "sarah_edo"
+  }
+]

@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <header [class]="['header', pageContext === 'twitters' && 'header-grid']">
+    <h1 class="heading heading-big">{{ item?.title }}</h1>
+    <p class="additional-info">
+      CREATED {{ item?.created | date: "dd.MM.yyyy" }}
+    </p>
+    <img
+      *ngIf="pageContext === 'twitters' && item?.twitterName"
+      class="avatar"
+      src="https://unavatar.now.sh/twitter/{{ item.twitterName }}"
+    />
+  </header>
+  <p class="paragraph">
+    {{ item?.content }}
+  </p>
+  <a
+    *ngIf="pageContext === 'articles' && item?.articleUrl"
+    [href]="item.articleUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="link"
+    >Open article</a
+  >
+  <button
+    [routerLink]="['/', pageContext]"
+    [class]="['btn', pageContext && 'btn-' + pageContext]"
+  >
+    Close
+  </button>
+  <button (click)="toggleRemoveItemModal()" class="btn btn-danger">
+    Remove
+  </button>
+</div>
+<app-remove-item-modal
+  *ngIf="isRemoveItemModalVisible"
+  (closeModal)="toggleRemoveItemModal()"
+  (removeItem)="handleRemoveItem()"
+></app-remove-item-modal>

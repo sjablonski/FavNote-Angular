@@ -1,0 +1,29 @@
+<div class="wrapper" (click)="isNewItemBarVisible = false">
+  <form [formGroup]="searchForm" autocomplete="off">
+    <label class="input-group" for="search">
+      <fa-icon class="input-icon" [icon]="faSearch"></fa-icon>
+      <input
+        id="search"
+        class="input"
+        type="text"
+        placeholder="Search"
+        formControlName="search"
+      />
+    </label>
+  </form>
+  <h1 class="heading heading-big">{{ pageContext }}</h1>
+  <p class="additional-info">{{ itemsLength }} {{ pageContext }}</p>
+  <div class="grid">
+    <ng-content></ng-content>
+  </div>
+</div>
+<button
+  [class]="['fab', pageContext && 'fab-' + pageContext]"
+  (click)="toggleNewItemBar()"
+>
+  <fa-icon class="fab-icon" [icon]="faPlus"></fa-icon>
+</button>
+<app-new-item-bar
+  [isNewItemBarVisible]="isNewItemBarVisible"
+  (closeNewItemBar)="toggleNewItemBar()"
+></app-new-item-bar>

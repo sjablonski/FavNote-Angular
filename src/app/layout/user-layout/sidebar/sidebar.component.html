@@ -1,0 +1,20 @@
+<nav [class]="['wrapper', pageContext && 'nav-' + pageContext]">
+  <a class="logo" routerLink="/notes"></a>
+  <ul class="list">
+    <li class="list-item">
+      <button class="btn-icon" routerLink="/notes" routerLinkActive="active">
+        <fa-icon class="icon" [icon]="faPen"></fa-icon>
+      </button>
+    </li>
+    <li class="list-item">
+      <button class="btn-icon" routerLink="/twitters" routerLinkActive="active">
+        <fa-icon class="icon" [icon]="faTwitter"></fa-icon>
+      </button>
+    </li>
+    <li class="list-item">
+      <button class="btn-icon" routerLink="/articles" routerLinkActive="active">
+        <fa-icon class="icon" [icon]="faLightbulb"></fa-icon>
+      </button>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,60 @@
+@import "variables";
+
+.wrapper {
+  background-color: #ffffff;
+  width: 68rem;
+  height: 100vh;
+  padding: 10rem 9rem;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  transform: translate(100%);
+  transition: transform 0.25s ease-in-out;
+
+  &-show {
+    transform: translate(0%);
+  }
+
+  &-notes {
+    border-left: 1rem solid $notes;
+  }
+
+  &-twitters {
+    border-left: 1rem solid $twitters;
+  }
+
+  &-articles {
+    border-left: 1rem solid $articles;
+  }
+}
+
+.paragraph {
+  font-size: $fontSizeL;
+}
+
+.input {
+  margin-top: 3.6rem;
+  width: 100%;
+}
+
+.textarea {
+  resize: none;
+  height: 30vh;
+  font-family: $fontFamily;
+  border-radius: 2rem;
+}
+
+.fab {
+  @media (max-width: 575.98px) {
+    top: 3.4rem;
+    bottom: 0;
+  }
+}
+
+.error-message {
+  margin: 0.4rem 0 0 2.4rem;
+  color: $red;
+  font-size: $fontSizeXS;
+}

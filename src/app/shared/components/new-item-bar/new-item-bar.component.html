@@ -1,0 +1,91 @@
+<div
+  [class]="[
+    'wrapper',
+    pageContext && 'wrapper-' + pageContext,
+    isSidebarVisible && 'wrapper-show'
+  ]"
+>
+  <h1 class="heading heading-big">Add new {{ pageContext }}</h1>
+  <p class="paragraph">A note requires title and description</p>
+  <form [formGroup]="itemForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <input
+      class="input"
+      formControlName="title"
+      type="text"
+      placeholder="Title"
+    />
+    <div *ngIf="title.invalid && (title.dirty || title.touched)">
+      <p *ngIf="title.errors.required" class="error-message">
+        Title is required.
+      </p>
+      <p *ngIf="title.errors.minlength" class="error-message">
+        Title must be at least 2 characters long.
+      </p>
+      <p *ngIf="title.errors.maxlength" class="error-message">
+        Title must be 32 characters or less.
+      </p>
+    </div>
+    <ng-template [ngIf]="pageContext === 'twitters'">
+      <input
+        class="input"
+        formControlName="twitterName"
+        type="text"
+        placeholder="Twitter name"
+      />
+      <div
+        *ngIf="
+          twitterName.invalid && (twitterName.dirty || twitterName.touched)
+        "
+      >
+        <p *ngIf="twitterName.errors.required" class="error-message">
+          Twitter name is required.
+        </p>
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="pageContext === 'articles'">
+      <input
+        class="input"
+        formControlName="articleUrl"
+        type="text"
+        placeholder="Link"
+      />
+      <div
+        *ngIf="articleUrl.invalid && (articleUrl.dirty || articleUrl.touched)"
+      >
+        <p *ngIf="articleUrl.errors.required" class="error-message">
+          Link is required.
+        </p>
+      </div>
+    </ng-template>
+    <textarea
+      class="input textarea"
+      formControlName="content"
+      placeholder="Description"
+    ></textarea>
+    <div *ngIf="content.invalid && (content.dirty || content.touched)">
+      <p *ngIf="content.errors.required" class="error-message">
+        Description is required.
+      </p>
+      <p *ngIf="content.errors.minlength" class="error-message">
+        Description must be at least 2 characters long.
+      </p>
+      <p *ngIf="content.errors.maxlength" class="error-message">
+        Description must be 250 characters or less.
+      </p>
+    </div>
+    <button
+      type="submit"
+      [class]="['btn', pageContext && 'btn-' + pageContext]"
+      [disabled]="submitted"
+    >
+      Add {{ pageContext }}
+    </button>
+  </form>
+  <button
+    type="button"
+    [class]="['fab', pageContext && 'fab-' + pageContext]"
+    (click)="handleClose()"
+  >
+    <fa-icon class="fab-icon" [icon]="faTimes"></fa-icon>
+  </button>
+</div>

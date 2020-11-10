@@ -1,0 +1,31 @@
+@import "variables";
+
+.wrapper {
+  padding: 5.8rem 16rem 3.2rem 7.2rem;
+}
+
+.heading {
+  display: block;
+  margin-top: 2.6rem;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8.6rem;
+  margin-top: 5.2rem;
+
+  @media all and (max-width: 999.98px) {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 1000px) and (max-width: 1500px) {
+    grid-gap: 4.3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 2048px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

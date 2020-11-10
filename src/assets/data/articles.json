@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "React on my mind",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "articleUrl": "https://youtube.com/helloroman",
+    "created": 1599561000000
+  },
+  {
+    "id": "2",
+    "title": "Wish you React",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "articleUrl": "https://youtube.com/helloroman",
+    "created": 1599559200000
+  },
+  {
+    "id": "3",
+    "title": "You gave React a bad name",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "articleUrl": "https://youtube.com/helloroman",
+    "created": 1599300000000
+  },
+  {
+    "id": "4",
+    "title": "Is it React you looking for?",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, tempora quibusdam natus modi tempore esse adipisci, dolore odit animi",
+    "articleUrl": "https://youtube.com/helloroman",
+    "created": 1598954400000
+  }
+]

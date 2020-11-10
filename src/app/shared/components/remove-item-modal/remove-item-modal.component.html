@@ -1,0 +1,16 @@
+<div class="background" (click)="handleCloseModal()"></div>
+<div class="wrapper">
+  <header [class]="['header', pageContext && 'header-' + pageContext]">
+    <h1 class="heading">Are you sure?</h1>
+  </header>
+  <div class="content">
+    <p>This action cannot be undone.</p>
+    <button
+      [class]="['btn', pageContext && 'btn-' + pageContext]"
+      (click)="handleCloseModal()"
+    >
+      Cancel
+    </button>
+    <button class="btn btn-danger" (click)="handleRemoveItem()">Remove</button>
+  </div>
+</div>

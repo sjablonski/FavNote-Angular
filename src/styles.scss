@@ -1,0 +1,219 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 575.98px) {
+    font-size: 31.25%;
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 39.0625%;
+  }
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 46.875%;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 54.6875%;
+  }
+
+  @media (min-width: 1200px) and(max-width: 2047.98px) {
+    font-size: 62.5%;
+  }
+
+  @media (min-width: 2048px) {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.additional-info {
+  margin: 0.2rem 0;
+  color: $grey400;
+  font-size: $fontSizeM;
+  font-weight: $fontBold;
+
+  &-small {
+    @extend .additional-info;
+    color: $black;
+    font-size: $fontSizeXS;
+  }
+}
+
+.btn {
+  width: 22rem;
+  height: 4.7rem;
+  border: 0;
+  border-radius: 5rem;
+  font-family: $fontFamily;
+  font-weight: 600;
+  font-size: $fontSizeS;
+  text-transform: uppercase;
+  margin: 2.4rem 2.4rem 0 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $grey100;
+    color: $grey300;
+  }
+
+  &-notes {
+    background-color: $notes;
+
+    &:hover {
+      background-color: darken($notes, 10%);
+    }
+  }
+  &-twitters {
+    background-color: $twitters;
+    &:hover {
+      background-color: darken($twitters, 10%);
+    }
+  }
+  &-articles {
+    background-color: $articles;
+    &:hover {
+      background-color: darken($articles, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: $grey200;
+    width: 10.5rem;
+    height: 3rem;
+    font-size: $fontSizeXXS;
+
+    &:hover {
+      background-color: darken($grey200, 10%);
+    }
+  }
+
+  &-danger {
+    background-color: $red;
+    color: #ffffff;
+    &:hover {
+      background-color: darken($red, 10%);
+    }
+  }
+}
+
+.heading {
+  margin: 0;
+  font-size: $fontSizeL;
+  font-weight: $fontBold;
+
+  &-big {
+    font-size: $fontSizeXL;
+  }
+}
+
+.input {
+  display: block;
+  padding: 1.4rem 3.6rem;
+  background-color: $grey100;
+  border: none;
+  border-radius: 5rem;
+  font-size: $fontSizeS;
+  font-family: $fontFamily;
+  font-weight: $fontRegular;
+
+  &::placeholder {
+    color: $grey300;
+    text-transform: uppercase;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &-icon + & {
+    padding-left: 4.4rem;
+  }
+
+  &-group {
+    display: inline-block;
+    position: relative;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 50%;
+    left: 1.4rem;
+    transform: translateY(-50%);
+    color: $grey400;
+    font-size: 1.8rem;
+  }
+}
+
+.paragraph {
+  margin: 0 0 4.8rem 0;
+  font-size: $fontSizeS;
+  font-weight: $fontLight;
+}
+
+.fab {
+  display: block;
+  width: 6.7rem;
+  height: 6.7rem;
+  border: none;
+  position: fixed;
+  bottom: 3.4rem;
+  right: 4.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &-icon {
+    font-size: $fontSizeL;
+  }
+
+  &-notes {
+    background-color: $notes;
+
+    &:hover {
+      background-color: darken($notes, 10%);
+    }
+  }
+
+  &-twitters {
+    background-color: $twitters;
+
+    &:hover {
+      background-color: darken($twitters, 10%);
+    }
+  }
+
+  &-articles {
+    background-color: $articles;
+
+    &:hover {
+      background-color: darken($articles, 10%);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
